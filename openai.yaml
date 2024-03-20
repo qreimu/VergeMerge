@@ -2,24 +2,43 @@
 # The `Merge` format used to enhance profile
 
 prepend-rules:
-    - 'DOMAIN-KEYWORD,openai,节点选择1'
-    - 'DOMAIN-SUFFIX,ai.com,节点选择1'
-    - 'DOMAIN-SUFFIX,auth0.com,节点选择1'
-    - 'DOMAIN-SUFFIX,openai.com,节点选择1'
-    - 'DOMAIN-SUFFIX,intercom.io,节点选择1'
-    - 'DOMAIN-SUFFIX,stripe.com,节点选择1'
-    - 'DOMAIN-SUFFIX,statsigapi.net,节点选择1'
-    - 'DOMAIN-SUFFIX,featuregates.org,节点选择1'
-    - 'DOMAIN-SUFFIX,anthropic.com,节点选择1'
-    - 'DOMAIN-SUFFIX,chatgpt.com,节点选择1'
-    - 'DOMAIN-SUFFIX,ip-api.com,节点选择1'
+    - 'DOMAIN-KEYWORD,openai,gpt'
+    - 'DOMAIN-SUFFIX,ai.com,gpt'
+    - 'DOMAIN-SUFFIX,auth0.com,gpt'
+    - 'DOMAIN-SUFFIX,openai.com,gpt'
+    - 'DOMAIN-SUFFIX,oaistatic.com,gpt'
+    - 'DOMAIN,challenges.cloudflare.com,gpt'
+    - 'DOMAIN-SUFFIX,identrust.com,gpt'
+    - 'DOMAIN-SUFFIX,intercom.io,gpt'
+    - 'DOMAIN-SUFFIX,intercomcdn.com,gpt'
+    - 'DOMAIN-SUFFIX,stripe.com,gpt'
+    - 'DOMAIN-SUFFIX,stripe.network,gpt'
+    - 'DOMAIN-SUFFIX,o33249.ingest.sentry.io,gpt'
+    - 'DOMAIN-SUFFIX,sentry.io,gpt'
+    - 'DOMAIN,events.statsigapi.net,gpt'
+    - 'DOMAIN-SUFFIX,statsigapi.net,gpt'
+    - 'DOMAIN-SUFFIX,featuregates.org,gpt'
+    - 'DOMAIN-SUFFIX,anthropic.com,gpt'
+    - 'DOMAIN-SUFFIX,chatgpt.com,gpt'
+    - 'DOMAIN-SUFFIX,cdn.jsdelivr.net,gpt'
+    - 'DOMAIN,optimizationguide-pa.googleapis.com,gpt'
+    - 'DOMAIN,openaiapi-site.azureedge.net,gpt'
 
 
 prepend-proxies:
 
 prepend-proxy-groups:
-    - { name: 节点选择1, type: select, proxies: [自动选择, 故障转移, '🇭🇰 香港 01', '🇭🇰 香港 02', '🇭🇰 香港 03', '🇭🇰 香港 04', '🇭🇰 香港 05', '🇭🇰 香港 06', '🇯🇵 日本 01', '🇯🇵 日本 02', '🇯🇵 日本 03', '🇯🇵 日本 04', '🇯🇵 日本 05', '🇯🇵 日本 06', '🇸🇬 新加坡 01', '🇸🇬 新加坡 02', '🇸🇬 新加坡 03', '🇸🇬 新加坡 04', '🇺🇸 美国 01', '🇺🇸 美国 02', '🇺🇸 美国 03', '🇺🇸 美国 04', '🇹🇼 台湾 1', '🇹🇼 台湾 2', '🇹🇼 台湾 3', '🇰🇷 韩国', '🇬🇧 英国', '🇩🇪 德国', '🇦🇪 迪拜', '🇨🇦 加拿大', '🇹🇷 土耳其', '🇦🇷 阿根廷', '🇭🇰 0.3倍|香港直连', '🇯🇵 0.3倍|日本直连', '🇸🇬 0.3倍|新加坡直连', '🇺🇸 0.3倍|美国直连'] }
-
+    - { name: gpt, type: select, proxies: [
+        '香港 01', '香港 02', '香港 03', '香港 04', '香港 05', '香港 06', 
+        '日本 01', '日本 02', '日本 03', '日本 04', '日本 05', '日本 06', 
+        '新加坡 01', '新加坡 02', '新加坡 03', '新加坡 04', 
+        '美国 01', '美国 02', '美国 03', '美国 04', 
+        '台湾 1', '台湾 2', '台湾 3',
+        '🍍 台湾A', '🍍 台湾B', '🍍 台湾C', '🍍 台湾D',
+        '🦁 新加坡A', '🦁 新加坡B', '🦁 新加坡C', '🦁 新加坡D',
+        '🌸 日本A', '🌸 日本B', '🌸 日本C', '🌸 日本D', '🌸 日本E',
+        '🌺 韩国A', '🌺 韩国B', '🌺 韩国C',
+        '🦅 美国A', '🦅 美国B', '🦅 美国C', ] }
 append-rules:
 
 append-proxies:
